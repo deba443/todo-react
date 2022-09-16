@@ -67,6 +67,10 @@ const TodoForm = () => {
 
     }
     const deleteItem = (index) => {
+        if(!inputData && toggleItems){
+            deleteValue=true
+
+        }
         // console.log(index);
         if(deleteValue){
             const updateditems = items.filter((elem, id) => {
@@ -96,15 +100,16 @@ const TodoForm = () => {
         localStorage.setItem('lists', JSON.stringify(items))
     }, [items]);
     return (
-        <div>
-            <section className="todo_input">
-                <form>
-                    <input type="text" placeholder="add your task" className="todo_input--field" id="name" value={inputData} onChange={(e) => setInputData(e.target.value)}></input>
+        <div className="Total_section" >
+            
+            <section className="todo_input max-w-5xl mx-auto mt-10 mb-0 inset-1/2">
+                <form className="flex justify-center items-center gap-4">
+                    <input type="text" placeholder="add your task" className="todo_input--field border border-indigo-600 ... rounded-md px-4 py-4 rounded-md" id="name" value={inputData} onChange={(e) => setInputData(e.target.value)}></input>
                     {
-                        toggleItems ? <button className="todo_input--button" type="button" id="addData" onClick={addItem} >Add</button> : <div className="editButtonItem">
+                        toggleItems ? <button className="todo_input--button border-zinc-800 border-solid border-2 rounded-sm px-1 py-1 w-20 bg-blue-700 text-white border-transparent" type="button" id="addData" onClick={addItem} >Add</button> : <div className="flex justify-center items-center ml-2 gap-1">
 
-                            <button className="todo_input--button" id="editData" onClick={addItem}>Update</button>
-                            <button className="todo_input--button" id="cancelData" onClick={cancelData}>Cancel</button>
+                            <button className="todo_input--button border-zinc-800 border-solid border-2 rounded-sm px-1 py-1 w-20 bg-red-600 text-white border-transparent" id="editData" onClick={addItem}>Update</button>
+                            <button className="todo_input--button border-zinc-800 border-solid border-2 rounded-sm px-1 py-1 w-20 bg-blue-700 text-white border-transparent" id="cancelData" onClick={cancelData}>Cancel</button>
                         </div>
 
                     }
@@ -113,16 +118,17 @@ const TodoForm = () => {
                 </form>
                 {/* <div id="msg"></div> */}
             </section>
-            <div className="showItems">
+            
+            <div className="showItems flex justify-center items-start flex-col pl-12 mt-5 absolute max-w-5xl my-0 mx-auto gap-4 left-64 pl-11">
                 {
 
                     items.map((ele, index) => {
                         return (
-                            <div className="eachItem" key={index}>
-                                <li>
+                            <div className="eachItem" key={index} >
+                                <li className="rounded bg-indigo-700 p-4 flex justify-between items-start cursor-pointer list-none shadow-md ... bg-blue-600 gap-4 text-white">
                                     <span>{ele}</span>
 
-                                    <div>
+                                    <div className="flex justify-center items-center gap-1">
                                         <button className="delete-todo js-delete-todo" onClick={() => deleteItem(index)}>
                                             <i className="far fa-trash-alt add-btn" title="Delete Item"></i>
 

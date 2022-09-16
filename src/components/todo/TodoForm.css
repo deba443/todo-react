@@ -1,0 +1,104 @@
+.todo_input{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    /* position: absolute; */
+    margin-top: 30vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+.showItems{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+    padding-left: 50px;
+    margin-top: 20px;
+    position: absolute;
+    left: 280px;
+}
+ form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+ }
+.todo_input--field{
+    /* position: relative;
+    top: 30vh;
+    left: 30vw; */
+    border: 0.5px solid #808080;
+    border-radius: 5px;
+    padding: 8px;
+    height: 50px;
+}
+.todo_input--button{
+    padding: 6px;
+    border-radius: 3px;
+    min-width: 60px;
+    background: #1d30db;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    border:3px solid #1d30db;
+    height: 45px;
+
+}
+#msg{
+    color:#da0808;
+}
+#editData{
+    background: #da0808;
+    border: 3px solid #da0808;
+    /* margin-left: 3px; */
+    /* display: none; */
+}
+#cancelData{
+    border: 3px solid rgb(8, 30, 226);
+    /* display: none; */
+}
+li{
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(233, 225, 225, 0.5);
+    background: rgb(8, 30, 226);
+    color: rgba(255, 255, 255, 0.925);
+    transition: 0.3s;
+    /* min-width: 60%; */
+    padding: 15px;
+    /* color: black;  */
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: larger;
+    gap: 30px;
+    width: 600px;
+    
+}
+.delete-todo,.edit-todo{
+    cursor: pointer;
+}
+li div{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.editButtonItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 10px;
+
+}

@@ -1,6 +1,6 @@
-li{
+/* li{
     width: 600px;
-}
+} */
 /* .total_section{
     display: flex;
     justify-content: center;
@@ -8,3 +8,12 @@ li{
     flex-direction: column;
 
 } */
+/* .add-btn:hover{
+    color: brown;
+    transform: scale(1.2);
+    
+} */
+/* .add-btn{
+    width: fit-content;
+    height: fit-content;
+} *

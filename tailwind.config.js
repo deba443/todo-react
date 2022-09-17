@@ -4,7 +4,19 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'customShadow': '0 0 10px rgba(0, 0, 0, 0.5)',
+      },
+      minWidth: {
+        'customMinWdith': '800px',
+      },
+      // hover:{
+      //   'color'
+      //   'trans':'scale(1.2)',
+      // }
+
+    },
   },
   plugins: [],
 }

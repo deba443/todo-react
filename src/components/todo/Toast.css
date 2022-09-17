@@ -1,0 +1,65 @@
+
+.toast {
+    position: fixed;
+    top: 80%;
+    left: 70%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 150px;
+    margin: auto auto;
+    min-height: 70px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: opacity 1s ease-out;
+    padding: 15PX;
+    float: left;
+    box-sizing: border-box;
+    /* transition-delay: 15s; */
+    font-size:smaller;
+    /* animation-timing-function: ease-in; */
+    animation: moving 2s;
+}
+@keyframes moving{
+    from{right:0px;}
+    to{right:60px}
+}
+
+.toastItem {
+    /* position:absolute;
+    top: 20%;
+    left: 0;
+    right: 0%;
+    bottom: 0%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: row; */
+
+}
+
+.delete {
+    position: absolute;
+    top: 3%;
+    left: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+
+}
+.delete:hover{
+    color: red;
+    transform: scale(1.2);
+}
+
+.toastItemContent {
+    overflow: hidden;
+    white-space: wrap;
+}
